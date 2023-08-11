@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <main>
       <Layout>
-        <h1>Hello World</h1>
+        <section className="container mx-auto">
+          <h1 className="text-5xl font-bold">Inicio</h1>
+        </section>
       </Layout>
     </main>
   );

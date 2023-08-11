@@ -7,7 +7,7 @@ export default function Header() {
         <ul className="flex justify-center">
           <li className="flex justify-center gap-10">
             <Link href="/">Home</Link>
-            <Link href="/profile">Profile</Link>
+            <Link href="/news">News</Link>
           </li>
         </ul>
       </header>

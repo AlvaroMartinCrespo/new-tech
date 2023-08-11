@@ -1,0 +1,3 @@
+api-key: 493b70361fb64dc18a06f30b8251490a
+
+request: https://newsapi.org/v2/top-headlines?country=us&apiKey=493b70361fb64dc18a06f30b8251490a
