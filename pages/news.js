@@ -6,11 +6,17 @@ export default function News() {
   // Get the news from the API
   useEffect(() => {
     const getNews = async () => {
-      const res = await fetch('./api/getNews');
+      const res = await fetch('./api/getNews', {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      });
       const data = await res.json();
       console.log(data);
       setTimeout(() => {
-        setNews(data);
+        setNews(data.news.articles);
       }, 1500);
     };
     getNews();
@@ -23,7 +29,15 @@ export default function News() {
           <h1 className="text-5xl font-bold">News</h1>
           {news ? (
             <>
-              <h1>Estan las noticias</h1>
+              {news.map((news) => {
+                return (
+                  <div key={news.id}>
+                    <h1>{news.title}</h1>
+                    <img src={news.urlToImage} alt={news.title} />
+                    <p>{news.description}</p>
+                  </div>
+                );
+              })}
             </>
           ) : (
             <>
