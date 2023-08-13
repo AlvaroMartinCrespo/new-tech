@@ -40,7 +40,6 @@ export default function News() {
                       <Card className="py-4 ">
                         <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                           <p className="text-tiny uppercase font-bold">{news.title}</p>
-                          <span>{news.title}</span>
                           <small className="text-default-500">{news.publishedAt}</small>
                         </CardHeader>
                         <CardBody className="overflow-visible py-2">

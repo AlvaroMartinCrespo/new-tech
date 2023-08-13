@@ -6,11 +6,11 @@ export default function Header() {
     const handleScroll = () => {
       const header = document.querySelector('#header');
       if (window.scrollY !== 0) {
-        header.classList.add('opacity-10');
+        header.classList.add('opacity-30');
         header.classList.remove('py-10');
         header.classList.add('py-5');
       } else {
-        header.classList.remove('opacity-10');
+        header.classList.remove('opacity-30');
         header.classList.remove('py-5');
         header.classList.add('py-10');
       }

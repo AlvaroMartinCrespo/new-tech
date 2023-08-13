@@ -2,4 +2,4 @@ api-key: 493b70361fb64dc18a06f30b8251490a
 
 request: https://newsapi.org/v2/top-headlines?country=us&apiKey=493b70361fb64dc18a06f30b8251490a
 
-request : https://newsapi.org/v2/everything?q=Call Of Duty Modern Warfare 3 Is Still Coming To PS4 And Xbox One - GameSpot&apiKey=493b70361fb64dc18a06f30b8251490a
+request : https://newsapi.org/v2/everything?q=Overwatch 2 Steam Launch Immediately Flooded With Negative Reviews - IGN Daily Fix - IGN&apiKey=493b70361fb64dc18a06f30b8251490a
