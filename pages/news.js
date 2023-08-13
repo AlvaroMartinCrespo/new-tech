@@ -1,7 +1,8 @@
-import Layout from './components/layout';
+import Layout from './components/Layout';
 import { useState, useEffect } from 'react';
-import { CircularProgress } from '@nextui-org/progress';
-import Image from 'next/image';
+import Loading from './components/Loading';
+import { Card, CardHeader, CardBody, CardFooter } from '@nextui-org/react';
+import Link from 'next/link';
 export default function News() {
   const [news, setNews] = useState('');
   // Get the news from the API
@@ -27,28 +28,33 @@ export default function News() {
     <>
       <Layout>
         <section className="container mx-auto p-5">
+          <div className="flex justify-center mt-32 text-white">
+            <h1 className="text-5xl font-bold">News</h1>
+          </div>
           {news ? (
             <>
-              <section className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+              <section className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-24">
                 {news.map((news) => {
                   return (
-                    <div key={news.id}>
-                      <h1>{news.title}</h1>
-                      <img className="w-full h-64" src={news.urlToImage} alt={news.title} />
-                      <div className="flex justify-end p-2">
-                        <span className="italic">{news.publishedAt}</span>
-                      </div>
-                    </div>
+                    <Link key={news.id} href={`/new/${news.title}`}>
+                      <Card className="py-4 ">
+                        <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                          <p className="text-tiny uppercase font-bold">{news.title}</p>
+                          <span>{news.title}</span>
+                          <small className="text-default-500">{news.publishedAt}</small>
+                        </CardHeader>
+                        <CardBody className="overflow-visible py-2">
+                          <img className="w-full h-64" src={news.urlToImage} alt={news.title} />
+                        </CardBody>
+                      </Card>
+                    </Link>
                   );
                 })}
               </section>
             </>
           ) : (
             <>
-              <section className="flex justify-center items-center gap-4">
-                <CircularProgress aria-label="Loading..." />
-                <span>Getting news...</span>
-              </section>
+              <Loading title="Getting news..." />
             </>
           )}
         </section>

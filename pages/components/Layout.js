@@ -10,7 +10,7 @@ export default function Layout({ title, children }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
-        <main className="">{children}</main>
+        <main className="bg-slate-800">{children}</main>
       </div>
     </>
   );
