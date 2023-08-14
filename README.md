@@ -1,11 +1,12 @@
 # New-Tech
 
-About
+## About
+
 Stay up-to-date with the latest in technology news from around the globe. Our website sources real-time tech updates through an API
 
 ## Demo
 
-Demo [aquí](https://weather-api-eta-rose.vercel.app/).
+Demo [aquí](https://new-tech-peach.vercel.app/).
 
 ## Capturas de pantalla
 
@@ -22,7 +23,7 @@ Demo [aquí](https://weather-api-eta-rose.vercel.app/).
 
 ## Used Technologies
 
-- ReactJS: JavaScript library for building user interfaces.
+- NextKs: JavaScript library for building user interfaces.
 - Tailwind CSS: Utility CSS framework for styling the project.
 
 ## Instalación
